@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210826110634_FirstMigration.cs" />
+    <Compile Remove="Migrations\20210826110634_FirstMigration.Designer.cs" />
+    <Compile Remove="Migrations\20210910065213_AddingTdentityToTable.cs" />
+    <Compile Remove="Migrations\20210910065213_AddingTdentityToTable.Designer.cs" />
+    <Compile Remove="Migrations\20210910065605_AddingTdentityToTable.cs" />
+    <Compile Remove="Migrations\20210910065605_AddingTdentityToTable.Designer.cs" />
+    <Compile Remove="Migrations\20210910154502_AddingTdentityToTableModify.cs" />
+    <Compile Remove="Migrations\20210910154502_AddingTdentityToTableModify.Designer.cs" />
+    <Compile Remove="Migrations\PaymentContextModelSnapshot.cs" />
+    <Compile Remove="Models\AppDbContext.cs" />
+    <Compile Remove="Models\RegisterViewModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+</Project>

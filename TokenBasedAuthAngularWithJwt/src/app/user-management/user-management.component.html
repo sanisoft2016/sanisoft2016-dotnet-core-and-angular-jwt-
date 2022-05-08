@@ -1,0 +1,34 @@
+<div class="container" style="margin-left: auto; margin-right: auto;">
+    <div class="col-md-12">
+        <span class="lead">
+            List of Users
+        </span>
+    
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>User Name</th>
+                    <th>First Name</th>
+                    <th>Sur Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr *ngFor="let pd of service.list2$ | async;"></tr> -->
+                
+                <tr *ngFor="let pdn of list;">
+                    <td>{{pdn.userName}}</td>
+                    <td>{{pdn.firstName}}</td>
+                    <td>{{pdn.surName}}</td>
+                    <td>{{pdn.email}}</td>
+                    <td>{{pdn.phoneNumber}}</td>
+                    <td>
+                        <i class="far fa-trash-alt fa-lg text-danger" (click)="deleteUserById(pdn.userName)"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

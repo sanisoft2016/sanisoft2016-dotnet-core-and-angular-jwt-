@@ -1,0 +1,81 @@
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <div class="card">
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">User Registeration Form</h5>
+
+                        <div class="md-3 row">
+                            <label class="col-sm-3 col-form-label" for="userCategory"> User Category</label>
+                            <div class="col-sm-9">
+                                <select class="form-select form-select-sm" aria-label=".form-select-sm example" 
+                                id="userCategory" formControlName="userCategory" maxlength="1" minlength="1">
+                                    <option value="">Make a choice</option>
+                                    <option value="0">Admin</option>
+                                    <option value="1">User</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="userName" class="col-sm-3 col-form-label">User Name</label>
+                            <div class="col-sm-9">
+                            <input type="text" formControlName="userName" class="select form-control" id="userName" value="">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="firstName" class="col-sm-3 col-form-label">First Name</label>
+                            <div class="col-sm-9">
+                            <input type="text" formControlName="firstName" class="form-control" id="firstName" value="">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="surName" class="col-sm-3 col-form-label">Sur Name</label>
+                            <div class="col-sm-9">
+                            <input type="text" class="form-control" formControlName="surName" id="surName">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="phoneNumber" class="col-sm-3 col-form-label">Phone Number</label>
+                            <div class="col-sm-9">
+                            <input type="text" class="form-control" formControlName="phoneNumber" id="phoneNumber">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="email" class="col-sm-3 col-form-label">Email</label>
+                            <div class="col-sm-9">
+                            <input type="email" formControlName="email" class="form-control" id="email" value="">
+                            </div>
+                        </div>
+
+                       <div class="mb-3 row">
+                            <label for="password" class="col-sm-3 col-form-label">Password</label>
+                            <div class="col-sm-9">
+                            <input type="password" class="form-control" formControlName="password" id="password">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="confirmPassword" class="col-sm-3 col-form-label">Confirm Password</label>
+                            <div class="col-sm-9">
+                            <input type="password" formControlName="confirmPassword" class="form-control" id="confirmPassword" value="">
+                            </div>
+                        </div> 
+                        
+                        <div class="mb-3 offset-md-9 row">
+                            <button class="btn btn-primary" type="submit" [disabled]="!registerForm.valid">Register</button>   
+                        </div>
+                    </div>          
+                </form>
+              </div>
+        </div>
+    </div>
+</div>
+
+
